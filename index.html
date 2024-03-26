@@ -46,7 +46,6 @@
 									<a href="#project">Patient </a>
 									<a href="#about">About</a>
 									<a id="con" href="#donates" >Contact US</a>
-									
 									<a href="donate.html">Donate</a>
 								</nav>
 								<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
@@ -64,7 +63,7 @@
 						<div class="row fullscreen align-items-center justify-content-start" style="height: 915px;">
 							<div class="banner-content col-lg-9 col-md-12">
 								<h1 style="text-align: initial; font-family: 'Times New Roman', Times, serif;">
-									Support Zaker Mohammed, <br>  This 23 years old needs your urgent support in his fight with blood cancer.
+									<span id="supportText"></span>  <br>  This 23 years old needs your urgent support in his fight with blood cancer.
 								</h1>
 								<a href="donate.html" class="head-btn btn text-uppercase">Donate Now</a>
 							</div>
@@ -361,7 +360,7 @@
 						<p class="footer-text m-0" id="copy">
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							
-							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  <i class="fa fa-heart-o" aria-hidden="true"></i> Safbud_cmpny
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  <i class="fa fa-heart-o" aria-hidden="true"></i><a href="https://wa.me/+91 8590389540 ">Safbud_cmpny</a> 		
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</p>	
 					</div>
@@ -379,5 +378,30 @@
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 			<script src="js/jquery.magnific-popup.min.js"></script>
 			<script src="js/main.js"></script>
+			<script>
+				// Text to display with the effect
+				var text = "Support Zaker Mohammed,";
+			
+				// Function to display the text letter by letter with a delay
+				function displayTextWithDelay() {
+					var element = document.getElementById('supportText');
+					element.innerHTML = ''; // Clear the element's content
+			
+					// Display text letter by letter with a delay
+					for (var i = 0; i < text.length; i++) {
+						setTimeout(function(letter) {
+							return function() {
+								element.innerHTML += letter;
+							}
+						}(text[i]), i * 200); // Adjust the delay time as needed
+					}
+				}
+			
+				// Call the function to start the effect when the page loads
+				window.onload = function() {
+					displayTextWithDelay();
+				};
+			</script>
+			
 		</body>
 	</html>
