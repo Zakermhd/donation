@@ -748,7 +748,7 @@ h1 {
 }
 
 h2 {
-    font-size: 30px
+    font-size: 35px
 }
 
 h3 {
@@ -1865,16 +1865,22 @@ nav {
     transform-origin: 100% 50%
 }
 
+#con{
+					
+    white-space: nowrap;
+}
 @media (max-width: 767px) {
     nav {
         margin-right:0;
         position: absolute;
         right: 0;
         top: 47px;
-        text-align: right;
+        text-align: justify;
         padding: 20px 0;
         z-index: 5;
-        background: #fff
+        background: #fff;
+        
+				
     }
 
     nav a {
